@@ -7,10 +7,11 @@ function App() {
     });
 
     function onNoteValueChange(event) {
+        const { name, value } = event.target;
         setNote((prevNote) => {
             return {
                 ...prevNote,
-                [event.target.name]: event.target.value
+                [name]: value
             };
         });
     }
