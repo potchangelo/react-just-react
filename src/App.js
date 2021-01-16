@@ -8,9 +8,10 @@ const emptyNote = {
 function App() {
     // - States
     const [note, setNote] = useState(emptyNote);
+    const [editNote, setEditNote] = useState(null);
     const [allNotes, setAllNotes] = useState([]);
 
-    // - Functions
+    // - Functions form inputs
     function onNoteValueChange(event) {
         const { name, value } = event.target;
         setNote((prevNote) => {
@@ -21,6 +22,17 @@ function App() {
         });
     }
 
+    function onEditNoteValueChange(event) {
+        const { name, value } = event.target;
+        setEditNote((prevEditNote) => {
+            return {
+                ...prevEditNote,
+                [name]: value
+            };
+        });
+    }
+
+    // - Functions add, edit, delete
     function onNoteSubmit(event) {
         event.preventDefault();
 
@@ -33,6 +45,21 @@ function App() {
 
         // Clear form
         setNote(emptyNote);
+    }
+
+    function onEditNoteSubmit(event) {
+        event.preventDefault();
+
+        // Edit note
+        setAllNotes((prevAllNotes) => {
+            return prevAllNotes.map((note) => {
+                if (note.id !== editNote.id) return note;
+                return editNote;
+            });
+        });
+
+        // Clear form
+        setEditNote(null);
     }
 
     function onNoteDelete(noteId) {
@@ -48,13 +75,44 @@ function App() {
                 <p>{theNote.content}</p>
                 <h5>{theNote.author}</h5>
                 <p>
-                    <a>Edit</a>
+                    <a onClick={() => {setEditNote(theNote)}}>Edit</a>
                     <span> | </span>
                     <a onClick={() => {onNoteDelete(theNote.id)}}>Delete</a>
                 </p>
             </div>
         );
     });
+
+    let editNoteElement = null;
+    if (!!editNote) {
+        editNoteElement = (
+            <div className="app-edit-note">
+                <form onSubmit={onEditNoteSubmit}>
+                    <p>
+                        <textarea
+                            rows="3"
+                            placeholder="บันทึกความในใจ"
+                            name="content"
+                            value={editNote.content}
+                            onChange={onEditNoteValueChange}
+                        />
+                    </p>
+                    <p>
+                        <input
+                            type="text"
+                            placeholder="ลงชื่อ"
+                            name="author"
+                            value={editNote.author}
+                            onChange={onEditNoteValueChange}
+                        />
+                    </p>
+                    <p>
+                        <button type="submit">แก้ไขซะ</button>
+                    </p>
+                </form>
+            </div>
+        );
+    }
 
     return (
         <section className="app-section">
@@ -87,6 +145,7 @@ function App() {
                     {allNotesElements}
                 </div>
             </div>
+            {editNoteElement}
         </section>
     );
 }
