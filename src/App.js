@@ -12,10 +12,11 @@ function App() {
 
     // - Functions
     function onNoteValueChange(event) {
+        const { name, value } = event.target;
         setNote((prevNote) => {
             return {
                 ...prevNote,
-                [event.target.name]: event.target.value
+                [name]: value
             };
         });
     }
@@ -34,12 +35,23 @@ function App() {
         setNote(emptyNote);
     }
 
+    function onNoteDelete(noteId) {
+        setAllNotes((prevAllNotes) => {
+            return prevAllNotes.filter(note => note.id !== noteId);
+        });
+    }
+
     // - Elements
     const allNotesElements = allNotes.map((theNote) => {
         return (
             <div key={theNote.id} className="app-note">
                 <p>{theNote.content}</p>
                 <h5>{theNote.author}</h5>
+                <p>
+                    <a>Edit</a>
+                    <span> | </span>
+                    <a onClick={() => {onNoteDelete(theNote.id)}}>Delete</a>
+                </p>
             </div>
         );
     });
