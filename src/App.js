@@ -37,7 +37,7 @@ function App() {
 
     function onNoteDelete(noteId) {
         setAllNotes((prevAllNotes) => {
-            return prevAllNotes.filter(note => note.id !== noteId);
+            return prevAllNotes.filter(theNote => theNote.id !== noteId);
         });
     }
 
@@ -80,7 +80,7 @@ function App() {
                         />
                     </p>
                     <p>
-                        <button type="submit">เพิ่มลงไป</button>
+                        <button type="submit">เพิ่มไปเลยสิค่ะที่รัก</button>
                     </p>
                 </form>
                 <div className="app-notes">
