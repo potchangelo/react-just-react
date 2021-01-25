@@ -43,7 +43,7 @@ function App() {
             return [newNote, ...prevAllNotes];
         });
 
-        // Clear form
+        // Clear add form
         setNote(emptyNote);
     }
 
@@ -58,7 +58,7 @@ function App() {
             });
         });
 
-        // Clear form
+        // Clear edit form
         setEditNote(null);
     }
 
@@ -107,7 +107,7 @@ function App() {
                         />
                     </p>
                     <p>
-                        <button type="submit">แก้ไขซะ</button>
+                        <button type="submit">แก้ไขซะที่รัก</button>
                     </p>
                 </form>
             </div>
@@ -138,7 +138,7 @@ function App() {
                         />
                     </p>
                     <p>
-                        <button type="submit">เพิ่มลงไป</button>
+                        <button type="submit">เพิ่มไปเลยสิค่ะที่รัก</button>
                     </p>
                 </form>
                 <div className="app-notes">
