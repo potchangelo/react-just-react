@@ -16,7 +16,7 @@ function LoginBox() {
     }
 
     return (
-        <form onSubmit>
+        <form>
             <h3>โปรดเข้าสู่ระบบ</h3>
             <p><input type="text" placeholder="Username" /></p>
             <p><input type="password" placeholder="Password" /></p>
