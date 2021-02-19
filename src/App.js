@@ -1,25 +1,22 @@
-import { useState } from 'react';
+import React from 'react';
 import './App.css';
-import Popup from './Popup';
+import LoginArea from './LoginArea';
+
+const fakeUser = { username: 'nice789', fullname: 'เต้า หมิงซื่อ' };
+
+const AuthContext = React.createContext();
 
 function App() {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-    let popup = null;
-    if (isPopupOpen) {
-        popup = <Popup onPopupClose={() => setIsPopupOpen(false)} />;
-    }
-
     return (
-        <section className="app-section">
-            <div className="app-container">
-                <h1>เก็บโค้ดส่วนลดไม่ทัน</h1>
-                <button onClick={() => setIsPopupOpen(true)}>เปิดป๊อปอัพ</button>
-                <p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p><p>น่ารัก</p>
-            </div>
-            {popup}
-        </section>
+        <AuthContext.Provider value={fakeUser}>
+            <section className="app-section">
+                <div className="app-container">
+                    <LoginArea />
+                </div>
+            </section>
+        </AuthContext.Provider>
     );
 }
 
+export { AuthContext };
 export default App;
