@@ -4,23 +4,23 @@ import { AuthContext } from "./App";
 const fakeUser = { username: 'nice789', fullname: 'เต้า หมิงซื่อ' };
 
 function LoginBox() {
-    const { auth, setAuth } = useContext(AuthContext);
+    const { authState, authDispatch } = useContext(AuthContext);
 
     function loginSubmit(event) {
         event.preventDefault();
-        setAuth(fakeUser);
+        authDispatch({ type: 'login', payload: fakeUser });
     }
 
     function logoutSubmit() {
-        setAuth(null);
+        authDispatch({ type: 'logout' });
     }
 
-    if (!!auth) {
+    if (!!authState) {
         return (
             <div>
                 <h3>เข้าสู่ระบบแล้วจ้า</h3>
-                <p>Auth username = {auth.username}</p>
-                <p>Auth fullname = {auth.fullname}</p>
+                <p>Auth username = {authState.username}</p>
+                <p>Auth fullname = {authState.fullname}</p>
                 <p><button onClick={logoutSubmit}>Log out</button></p>
             </div>
         );
