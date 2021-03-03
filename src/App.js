@@ -1,32 +1,37 @@
-import React, { useReducer } from 'react';
+import { useRef } from 'react';
 import './App.css';
-import LoginArea from './LoginArea';
-
-const AuthContext = React.createContext();
-
-function reducer(state, action) {
-    if (action.type === 'login') {
-        const { username, fullname } = action.payload;
-        return { username, fullname };
-    }
-    if (action.type === 'logout') {
-        return null;
-    }
-    return state;
-}
 
 function App() {
-    const [authState, authDispatch] = useReducer(reducer, null);
+    const textareaRef = useRef(null);
+    const fileRef = useRef(null);
+
+    function onSendClick() {
+        console.log(fileRef.current.files[0]);
+    }
+
+    function onSelectTextClick() {
+        textareaRef.current.focus();
+        textareaRef.current.select();
+    }
+
     return (
-        <AuthContext.Provider value={{ authState, authDispatch }}>
-            <section className="app-section">
-                <div className="app-container">
-                    <LoginArea />
-                </div>
-            </section>
-        </AuthContext.Provider>
+        <section className="app-section">
+            <div className="app-container">
+                <p>
+                    <textarea ref={textareaRef}></textarea>
+                </p>
+                <p>
+                    <button onClick={onSelectTextClick}>เลือกข้อความทั้งหมด</button>
+                </p>
+                <p>
+                    <input type="file" ref={fileRef} />
+                </p>
+                <p>
+                    <button onClick={onSendClick}>ส่งไฟล์</button>
+                </p>
+            </div>
+        </section>
     );
 }
 
-export { AuthContext };
 export default App;
