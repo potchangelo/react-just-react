@@ -1,5 +1,7 @@
 import { useRef } from 'react';
 import './App.css';
+import SelectTextarea from './SelectTextarea';
+import SendFile from './SendFile';
 
 function App() {
     const textareaRef = useRef(null);
@@ -17,18 +19,8 @@ function App() {
     return (
         <section className="app-section">
             <div className="app-container">
-                <p>
-                    <textarea ref={textareaRef}></textarea>
-                </p>
-                <p>
-                    <button onClick={onSelectTextClick}>เลือกข้อความทั้งหมด</button>
-                </p>
-                <p>
-                    <input type="file" ref={fileRef} />
-                </p>
-                <p>
-                    <button onClick={onSendClick}>ส่งไฟล์</button>
-                </p>
+                <SelectTextarea onSelectTextClick={onSelectTextClick} ref={textareaRef} />
+                <SendFile onSendClick={onSendClick} ref={fileRef} />
             </div>
         </section>
     );
