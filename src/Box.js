@@ -1,3 +1,4 @@
+// Box.js used CSS modules
 import styles from './Box.module.css';
 
 function Box(props) {

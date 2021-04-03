@@ -1,3 +1,4 @@
+// App.js used normal CSS
 import './App.css';
 import Box from './Box';
 import Notification from './Notification';
@@ -8,7 +9,7 @@ function App() {
         <section className="app-section">
             <div className="app-container">
                 <h2>Farm Dashboard</h2>
-                <Notification title="สวัสดี" description="เรามาอย่างสันติ" />
+                <Notification title="สวัสดี" description="เรามาอย่างสันติ" level="danger" />
                 <Grid columns={3}>
                     <Box title="ออเดอร์ต่อวัน">
                         <ul>
