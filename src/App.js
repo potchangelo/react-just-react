@@ -1,8 +1,8 @@
 import { Route, Switch } from 'react-router-dom';
+import AppHeader from './AppHeader';
 import PageHome from './PageHome';
 import PageAbout from './PageAbout';
 import Page404 from './Page404';
-import AppHeader from './AppHeader';
 
 function App() {
     return (
