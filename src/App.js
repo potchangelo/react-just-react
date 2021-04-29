@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 import AppHeader from './AppHeader';
 import PageHome from './PageHome';
 import PageAbout from './PageAbout';
+import PagePost from './PagePost';
 import Page404 from './Page404';
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
                 </Route>
                 <Route path="/about">
                     <PageAbout />
+                </Route>
+                <Route path="/post/:postId">
+                    <PagePost />
                 </Route>
                 <Route path="*">
                     <Page404 />
