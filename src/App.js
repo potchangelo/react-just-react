@@ -1,29 +1,12 @@
-import { Route, Switch } from 'react-router-dom';
-import AppHeader from './AppHeader';
-import PageHome from './PageHome';
-import PageAbout from './PageAbout';
-import PagePost from './PagePost';
-import Page404 from './Page404';
+import './App.css';
 
 function App() {
     return (
-        <div>
-            <AppHeader />
-            <Switch>
-                <Route path="/" exact>
-                    <PageHome />
-                </Route>
-                <Route path="/about">
-                    <PageAbout />
-                </Route>
-                <Route path="/post/:postId">
-                    <PagePost />
-                </Route>
-                <Route path="*">
-                    <Page404 />
-                </Route>
-            </Switch>
-        </div>
+        <section className="app-section">
+            <div className="app-container">
+                <h2>อิอิอิอิ</h2>
+            </div>
+        </section>
     );
 }
 

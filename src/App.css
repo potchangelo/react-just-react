@@ -1,8 +1,8 @@
-.layout-page-section {
+.app-section {
     padding: 20px;
 }
 
-.layout-page-container {
+.app-container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
