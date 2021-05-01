@@ -14,3 +14,8 @@ Branches for each episode
 8. [useContext](https://github.com/potchangelo/react-just-react/tree/08-context)
 9. [useContext x useState](https://github.com/potchangelo/react-just-react/tree/09-context-state)
 10. [useContext x useReducer](https://github.com/potchangelo/react-just-react/tree/10-context-reducer)
+11. [useRef](https://github.com/potchangelo/react-just-react/tree/11-ref)
+12. [forwardRef](https://github.com/potchangelo/react-just-react/tree/12-forward-ref)
+13. [Layout Components](https://github.com/potchangelo/react-just-react/tree/13-layout-components)
+14. [CSS Modules](https://github.com/potchangelo/react-just-react/tree/14-css-modules)
+15. [styled-components](https://github.com/potchangelo/react-just-react/tree/15-styled-components)
