@@ -1,13 +1,30 @@
-import './App.css';
+import { useState } from 'react';
+import styled from 'styled-components';
+import BoxInput from './BoxInput';
+import BoxOutput from './BoxOutput';
 
 function App() {
+    const [bmi, setBmi] = useState(null);
+
     return (
-        <section className="app-section">
-            <div className="app-container">
-                <h2>อิอิอิอิ</h2>
-            </div>
-        </section>
+        <AppSection>
+            <AppContainer>
+                <h2>คำนวณ BMI</h2>
+                <BoxInput onCalculateBmi={setBmi} />
+                <BoxOutput bmi={bmi} />
+            </AppContainer>
+        </AppSection>
     );
 }
+
+const AppSection = styled.section`
+    padding: 20px;
+`;
+
+const AppContainer = styled.section`
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+`;
 
 export default App;
