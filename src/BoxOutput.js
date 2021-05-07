@@ -7,10 +7,21 @@ function BoxOutput(props) {
         return <OutputDiv>---</OutputDiv>;
     }
 
+    let result = '';
+    if (bmi < 18.5) {
+        result = 'ผอม';
+    }
+    else if (bmi >= 18.5 && bmi <=25) {
+        result = 'ปกติ';
+    }
+    else {
+        result = 'อ้วน';
+    }
+
     return (
         <OutputDiv>
             <h3>BMI = {bmi.toFixed(2)}</h3>
-            <h2>ผลลัพธ์ = ปกติ</h2>
+            <h2>ผลลัพธ์ = {result}</h2>
         </OutputDiv>
     );
 }
@@ -23,4 +34,6 @@ const OutputDiv = styled.div`
 
 export default BoxOutput;
 
-// ผอม ปกติ อ้วน
+// น้อยกว่า 18.5 => ผอม
+// 18.5 - 25   => ปกติ
+// มากกว่า 25   => อ้วน
