@@ -22,3 +22,4 @@ Branches for each episode
 16. [React Router basic routes](https://github.com/potchangelo/react-just-react/tree/16-react-router)
 17. [React Router nested routes](https://github.com/potchangelo/react-just-react/tree/17-react-router-nested)
 18. [React Router dynamic routes](https://github.com/potchangelo/react-just-react/tree/18-react-router-dynamic)
+19. [React Testing Library](https://github.com/potchangelo/react-just-react/tree/19-react-testing-library)

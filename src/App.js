@@ -9,7 +9,7 @@ function App() {
     return (
         <AppSection>
             <AppContainer>
-                <h2>คำนวณ BMI</h2>
+                <h2>เว็บแอพคำนวณ BMI</h2>
                 <BoxInput onCalculateBmi={setBmi} />
                 <BoxOutput bmi={bmi} />
             </AppContainer>
