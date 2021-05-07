@@ -13,8 +13,7 @@ code {
 }
 
 input[type="text"], 
-input[type="password"], 
-input[type="file"], 
+input[type="number"],
 textarea {
   border: 1px solid gray;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
