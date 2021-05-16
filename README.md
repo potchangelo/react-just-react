@@ -19,3 +19,7 @@ Branches for each episode
 13. [Layout Components](https://github.com/potchangelo/react-just-react/tree/13-layout-components)
 14. [CSS Modules](https://github.com/potchangelo/react-just-react/tree/14-css-modules)
 15. [styled-components](https://github.com/potchangelo/react-just-react/tree/15-styled-components)
+16. [React Router basic routes](https://github.com/potchangelo/react-just-react/tree/16-react-router)
+17. [React Router nested routes](https://github.com/potchangelo/react-just-react/tree/17-react-router-nested)
+18. [React Router dynamic routes](https://github.com/potchangelo/react-just-react/tree/18-react-router-dynamic)
+19. [React Testing Library](https://github.com/potchangelo/react-just-react/tree/19-react-testing-library)
