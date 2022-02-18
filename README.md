@@ -2,9 +2,18 @@
 
 ตัวอย่างโปรเจ็ค React จากคลิปสอน Ep.2-20 ของ Zinglecode
 
+
 ## YouTube video with playlist
 
 https://www.youtube.com/watch?v=dxm-Mtd-LPs&list=PL_xSQKvnccpn-C2fZNJtCykO24yqFWkDn&index=2
+
+
+## About React Router
+
+เนื่องจาก React Router ที่ใช้ใน Github Repo อันนี้เป็น v5 (ตัวเก่า) ดังนั้นถ้าใครอยากดูตัวอย่างโค้ดของ React Router v6 (ตัวปัจจุบัน) กรุณาเปิดดูได้จากลิ้งค์นี้
+
+https://github.com/potchangelo/react-just-react-router-v6
+
 
 ## Install and Run project on VSCode
 
@@ -49,3 +58,4 @@ npm start
 17. [React Router nested routes](https://github.com/potchangelo/react-just-react/tree/17-react-router-nested)
 18. [React Router dynamic routes](https://github.com/potchangelo/react-just-react/tree/18-react-router-dynamic)
 19. [React Testing Library](https://github.com/potchangelo/react-just-react/tree/19-react-testing-library)
+
