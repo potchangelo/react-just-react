@@ -1,8 +1,43 @@
-# Example React code
+# React Just React examples code
 
-From Zinglecode's YouTube React Ep.2 and later
+ตัวอย่างโปรเจ็ค React จากคลิปสอน Ep.2-20 ของ Zinglecode
 
-Branches for each episode
+
+## YouTube video with playlist
+
+https://www.youtube.com/watch?v=dxm-Mtd-LPs&list=PL_xSQKvnccpn-C2fZNJtCykO24yqFWkDn&index=2
+
+
+## About React Router
+
+เนื่องจาก React Router ที่ใช้ใน Github Repo อันนี้เป็น v5 (ตัวเก่า) ดังนั้นถ้าใครอยากดูตัวอย่างโค้ดของ React Router v6 (ตัวปัจจุบัน) กรุณาเปิดดูได้จากลิ้งค์นี้
+
+https://github.com/potchangelo/react-just-react-router-v6
+
+
+## Install and Run project on VSCode
+
+0. ติดตั้ง Node.js ลงเครื่องให้เรียบร้อยก่อน (ใช้ Version 14, 16, หรือ 18 ก็ได้)
+
+1. ดาวน์โหลดโปรเจ็คนี้ลงเครื่อง (เลือกจาก Github branch ที่ต้องการได้)
+
+2. เปิดโฟลเดอร์โปรเจ็คใน VSCode
+
+3. เปิด VSCode Terminal
+
+4. ติดตั้ง Packages ของโปรเจ็ค (สามารถแก้ไขเลขเวอร์ชั่นของ Packages, Libraries ต่างๆ ให้เป็นเวอร์ชั่นล่าสุด ก่อนทำการติดตั้งได้ ที่ในไฟล์ package.json)
+
+```
+npm install
+```
+
+5. Run เว็บโปรเจ็ค
+
+```
+npm start
+```
+
+## Github branches for each episodes
 
 1. [Start](https://github.com/potchangelo/react-just-react/tree/01-start)
 2. [State x Object](https://github.com/potchangelo/react-just-react/tree/02-state-x-object)
@@ -23,3 +58,4 @@ Branches for each episode
 17. [React Router nested routes](https://github.com/potchangelo/react-just-react/tree/17-react-router-nested)
 18. [React Router dynamic routes](https://github.com/potchangelo/react-just-react/tree/18-react-router-dynamic)
 19. [React Testing Library](https://github.com/potchangelo/react-just-react/tree/19-react-testing-library)
+
