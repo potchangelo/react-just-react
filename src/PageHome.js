@@ -1,11 +1,11 @@
-import LayoutPage from "./LayoutPage";
+import LayoutPage from './LayoutPage';
 
 function PageHome() {
-    return (
-        <LayoutPage>
-            <h2>Home หน้าแรกของหมู่เฮา</h2>
-        </LayoutPage>
-    );
+  return (
+    <LayoutPage>
+      <h2>Home หน้าแรกของหมู่เฮา</h2>
+    </LayoutPage>
+  );
 }
 
 export default PageHome;

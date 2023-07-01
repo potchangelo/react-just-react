@@ -5,22 +5,22 @@ import Page404 from './Page404';
 import AppHeader from './AppHeader';
 
 function App() {
-    return (
-        <div>
-            <AppHeader />
-            <Switch>
-                <Route path="/" exact>
-                    <PageHome />
-                </Route>
-                <Route path="/about">
-                    <PageAbout />
-                </Route>
-                <Route path="*">
-                    <Page404 />
-                </Route>
-            </Switch>
-        </div>
-    );
+  return (
+    <div>
+      <AppHeader />
+      <Switch>
+        <Route path="/" exact>
+          <PageHome />
+        </Route>
+        <Route path="/about">
+          <PageAbout />
+        </Route>
+        <Route path="*">
+          <Page404 />
+        </Route>
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
