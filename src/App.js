@@ -7,15 +7,15 @@ const fakeUser = { username: 'nice789', fullname: 'เต้า หมิงซ�
 const AuthContext = React.createContext();
 
 function App() {
-    return (
-        <AuthContext.Provider value={fakeUser}>
-            <section className="app-section">
-                <div className="app-container">
-                    <LoginArea />
-                </div>
-            </section>
-        </AuthContext.Provider>
-    );
+  return (
+    <AuthContext.Provider value={fakeUser}>
+      <section className="app-section">
+        <div className="app-container">
+          <LoginArea />
+        </div>
+      </section>
+    </AuthContext.Provider>
+  );
 }
 
 export { AuthContext };
