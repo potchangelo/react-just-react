@@ -17,7 +17,7 @@ https://github.com/potchangelo/react-just-react-router-v6
 
 ## Install and Run project on VSCode
 
-0. ติดตั้ง Node.js ลงเครื่องให้เรียบร้อยก่อน (ใช้ Version 14 หรือ 16 ก็ได้)
+0. ติดตั้ง Node.js ลงเครื่องให้เรียบร้อยก่อน (ใช้ Version 14, 16, หรือ 18 ก็ได้)
 
 1. ดาวน์โหลดโปรเจ็คนี้ลงเครื่อง (เลือกจาก Github branch ที่ต้องการได้)
 
